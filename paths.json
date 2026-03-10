@@ -1,10 +1,10 @@
 {
   "mappings": [
-    "/content/eds-training-ue/:/",
-    "/content/eds-training-ue/configuration:/.helix/config.json",
-    "/content/eds-training-ue/metadata:/metadata.json"
+    "/content/ld-eds-ue/:/",
+    "/content/ld-eds-ue/configuration:/.helix/config.json",
+    "/content/ld-eds-ue/metadata:/metadata.json"
   ],
   "includes": [
-    "/content/eds-training-ue/"
+    "/content/ld-eds-ue/"
   ]
 }
