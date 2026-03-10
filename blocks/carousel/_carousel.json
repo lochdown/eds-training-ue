@@ -57,10 +57,27 @@
           "value": ""
         },
         {
-          "component": "richtext",
+          "component": "aem-content",
+          "name": "cta_primary",
+          "label": "Primary CTA Link"
+        },
+        {
+          "component": "text",
           "valueType": "string",
-          "name": "ctas",
-          "label": "CTAs (add up to 2 links)",
+          "name": "cta_primaryText",
+          "label": "Primary CTA Text",
+          "value": ""
+        },
+        {
+          "component": "aem-content",
+          "name": "cta_secondary",
+          "label": "Secondary CTA Link"
+        },
+        {
+          "component": "text",
+          "valueType": "string",
+          "name": "cta_secondaryText",
+          "label": "Secondary CTA Text",
           "value": ""
         }
       ]

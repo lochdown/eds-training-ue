@@ -8,6 +8,13 @@ function getCellText(cell) {
   return cell.textContent.trim();
 }
 
+function getCellLink(cell) {
+  if (!cell) return '';
+  const anchor = cell.querySelector('a');
+  if (anchor?.href) return anchor.href;
+  return '';
+}
+
 function extractSlide(row) {
   const cells = [...row.children];
   const image = cells[0]?.querySelector('img');
@@ -15,10 +22,10 @@ function extractSlide(row) {
   const description = getCellText(cells[2]);
   const ctaLinks = [...(cells[3]?.querySelectorAll('a') || [])].slice(0, 2);
 
-  const primaryCtaText = ctaLinks[0]?.textContent.trim() || '';
-  const primaryCtaLink = ctaLinks[0]?.href || '';
-  const secondaryCtaText = ctaLinks[1]?.textContent.trim() || '';
-  const secondaryCtaLink = ctaLinks[1]?.href || '';
+  const primaryCtaText = ctaLinks[0]?.textContent.trim() || getCellText(cells[3]);
+  const primaryCtaLink = ctaLinks[0]?.href || getCellLink(cells[4]);
+  const secondaryCtaText = ctaLinks[1]?.textContent.trim() || getCellText(cells[5]);
+  const secondaryCtaLink = ctaLinks[1]?.href || getCellLink(cells[6]);
 
   return {
     image,
